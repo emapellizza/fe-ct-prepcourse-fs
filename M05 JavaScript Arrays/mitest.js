@@ -5,20 +5,20 @@
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
 
-let array=["hola","buenos","dias"]
+let array=["hola","buenos","dias","puto"]
 
 
-let miString
+let miString=[]
 
 
 for(let i = 0; array.length > i; i++){
 
    //console.log(array[i])
-   miString = " " + array[i]
+   miString [i]= " " + array[i]
 }
 
 //miString=array[0]+" "+array[1]+" "+array[2]
 
-//miString = miString.toString();
+miString = miString.toString();
 
 console.log(miString)
