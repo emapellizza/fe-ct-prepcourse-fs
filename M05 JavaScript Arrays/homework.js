@@ -56,13 +56,16 @@ function dePalabrasAFrase(palabras) {
    let miString=[]
 
    for(let i = 0; palabras.length > i; i++){
-
-    miString[i] = palabras[i]+" "
-
+   
+      //console.log(array[i])
+      miString [i]= palabras[i]+" " 
    }
-
-miString = miString.toString();
-return(miString)
+   
+   miString = miString.toString();
+   miString = miString.replaceAll(',','')
+   miString = miString.slice(0,-1)
+   
+   return(miString)
 
 }
 
@@ -70,25 +73,53 @@ function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
+   //const found = array1.find((element) => element > 10);
+   if(array.includes(elemento)){
+      return true
+   }else
+   return false
+
 }
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+   
+   return (arrayOfNums.reduce((sum,item)=> sum + item, 0) )
 }
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   let sumados = resultadosTest.reduce((sum,item)=> sum + item, 0)
+   sumados= sumados / resultadosTest.length
+   return(sumados)
 }
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-}
+      if (arrayOfNums.length === 0) {
+        return undefined; // Devuelve undefined si el array está vacío
+      }
+    
+      return arrayOfNums.reduce(function (max, numero) {
+        if (numero > max) {
+          return numero;
+        } else {
+          return max;
+        }
+      }, arrayOfNums[0]);
+    }
+    
+    
+  
+   
+   
+
 
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
